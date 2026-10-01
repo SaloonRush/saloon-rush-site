@@ -2,7 +2,7 @@
   var q = new URLSearchParams(location.search).get("lang");
   var saved = null;
   try { saved = localStorage.getItem("lang"); } catch (e) {}
-  var lang = q || saved || ((navigator.language || "en").toLowerCase().indexOf("ru") === 0 ? "ru" : "en");
+  var lang = q || saved || "en";
   if (lang !== "ru") lang = "en";
 
   function apply(l) {
